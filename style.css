@@ -1,0 +1,11 @@
+#main{
+    text-align: center;
+}
+.form-control{
+    max-width: 700px;
+    float: left;
+}
+#err, #err2{
+    color: red;
+    font-size: 15px;
+}
