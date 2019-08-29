@@ -3,7 +3,7 @@ $(document).ready(function(){
     
     $("#checkInput").on('click', function(){
 
-        var inputVal = $("#urlCheck").val();
+        var inputVal = $("#urlCheck").val().trim();
         
             if(checkUrl(inputVal)){
                  $('img').attr("src", "./img/checked.png")
@@ -12,7 +12,7 @@ $(document).ready(function(){
             }else{
                  $('img').attr("src", "./img/cancel.png")
                  $('#displErr').append("<p id='err'>Please enter valid URL </p>")
-                 setTimeout(function(){ $("img").removeAttr("src"),  $("#urlCheck").val(" "), $("#err").remove()  }, 3000);
+                 setTimeout(function(){ $("img").removeAttr("src"),  $("#urlCheck").val(""), $("#err").remove()  }, 2000);
                  console.log($("#urlCheck").val())
                  
             }
@@ -20,7 +20,7 @@ $(document).ready(function(){
     })
     $("#encode").on('click', function(){
 
-         var encodeInptVal = $('#urlEncode').val()
+         var encodeInptVal = $('#urlEncode').val().trim()
         //console.log(encodeInptVal)
             if(checkUrl(encodeInptVal)){
         
@@ -29,7 +29,7 @@ $(document).ready(function(){
                 $('#encodedUrl').text(res)
             }else{
                 $('#displErrSecond').append("<p id='err2'>Please enter valid URL </p>")
-                setTimeout(function(){ $("#urlEncode").val(" "), $("#err2").hide()  }, 5000);
+                setTimeout(function(){ $("#urlEncode").val(""), $("#err2").hide()  }, 2000);
             }
     })
 
