@@ -4,6 +4,7 @@ $(document).ready(function(){
     $("#checkInput").on('click', function(){
 
         var inputVal = $("#urlCheck").val();
+        
             if(checkUrl(inputVal)){
                  $('img').attr("src", "./img/checked.png")
                  setTimeout(function(){ $("img").removeAttr("src") }, 5000);
@@ -13,8 +14,9 @@ $(document).ready(function(){
                  $('#displErr').append("<p id='err'>Please enter valid URL </p>")
                  setTimeout(function(){ $("img").removeAttr("src"),  $("#urlCheck").val(" "), $("#err").remove()  }, 3000);
                  console.log($("#urlCheck").val())
-                 end();
+                 
             }
+            exit();
     })
     $("#encode").on('click', function(){
 
