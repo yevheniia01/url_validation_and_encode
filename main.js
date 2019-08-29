@@ -11,8 +11,9 @@ $(document).ready(function(){
             }else{
                  $('img').attr("src", "./img/cancel.png")
                  $('#displErr').append("<p id='err'>Please enter valid URL </p>")
-                 setTimeout(function(){ $("img").removeAttr("src"),  $("#urlCheck").val(" "), $("#err").hide()  }, 5000);
-   
+                 setTimeout(function(){ $("img").removeAttr("src"),  $("#urlCheck").val(" "), $("#err").remove()  }, 3000);
+                 console.log($("#urlCheck").val())
+                 end();
             }
     })
     $("#encode").on('click', function(){
